@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced JS</title>
+	<link rel="stylesheet" type="text/css" href="CSS/common.css">
+	<link rel="stylesheet" type="text/css" href="CSS/JS.css">
+</head>
+
+<body>
+	<div class="CurtainMenu">
+		<div class="logo-tagline">
+			<div class="logo">
+				<img src="MEDIA/global.png"/>
+			</div>
+			<div class="tagline">ITWD 6.408
+			</div>
+		</div>
+		
+		
+		<div class="desktop-menu">
+			<div class="horizontal-nav">
+				<ul>
+					<li><a href="homepage.html">HOME</a></li>
+					<li><a href="booking.html">BOOKING</a></li>
+					<li><a href="faq.html">FAQ</a></li>
+					<li><a href="research.html">RESEARCH</a></li>
+					<li class="active"><a href="Advanced JS.html">ADVANCE JS</a></li>	
+				</ul>
+			</div>
+		</div>
+		
+		
+		<p class="menu-icon-style" onclick="openNav()">≡</p>
+	</div>
+	
+	
+	<nav id="curtain-nav">
+		<a href="javascript:void(0)" class="nav-close-button" onclick="closeNav()">❌</a>
+		<div class="curtain-nav-content">
+			<ul>
+				<li class="active"><a href="index.html">HOME</a></li>
+				<li><a href="fomrs.html">FORMS</a></li>
+				<li><a href="xml-jsaon.html">XML/JSON</a></li>
+				<li><a href="js-demo.html">JAVASCRIPT</a></li>
+				<li><a href="my-research.html">RESEARCH</a></li>	
+			</ul>
+		</div>
+	</nav>
+	<header>
+		<h1 class="title-area">JavaScript Extension</h1>
+		<nav class="menu-area">
+		  <ul>
+			<button><a href="homepage.html">HOME</a></button>
+			<button><a href="Advanced JS.html">EXTENSION</a></button>
+		  </ul>
+		</nav>
+	  </header>
+	
+	<main>
+		<section class="internal-menu-area">	
+			<div class="internal-menu-row">
+				<div class="internal-menu-row-box">
+					<button class="demo-button" onclick="showDemo(0)">Demo1</button>
+				</div>
+				<div class="internal-menu-row-box">
+					<button class="demo-button" onclick="showDemo(1)">Demo2</button>
+				</div>
+				<div class="internal-menu-row-box">
+					<button class="demo-button" onclick="showDemo(2)">Demo3</button>
+				</div>
+				<div class="internal-menu-row-box">
+					<button class="demo-button" onclick="showDemo(3)">Demo4</button>
+				</div>
+				<div class="internal-menu-row-box">
+					<button class="demo-button" onclick="showDemo(4)">Demo5</button>
+				</div>
+			</div>
+		</section>
+		
+
+
+
+		<section class="demo-area">
+			<article class="demo-box">
+				<section>
+					<hr>
+					<h2> Computer Fix Booking System</h2>
+		
+					<form name="invoiceForm" action="" method="">
+
+						<div class="input-div">
+							<label>Phone: </label>
+							<input type="text" name="courtesy_phone"/>
+						</div>
+
+						<div class="input-div">
+							<label> Name:    </label>
+							<input type="text" name="fullname"/>
+						</div>	
+						
+						<div class="input-div">
+							<label>Email: </label>
+							<input type="text" name="email"/>
+						</div>	
+						
+						<div class="input-div">
+							<label>Charger: </label>
+							<input type="text" name="charger"/>
+						</div>		
+
+						<div class="input-div">
+							<label>Computer number: </label>
+							<input type="text" name="phone_number"/>
+						</div>
+				
+						<div class="input-div">
+							<label>Total cost (NZD): </label>
+							<input type="number" name="total_cost"/>
+						</div>	
+						
+						<div class="input-div">
+							<label> GST     (NZD) : </label>
+							<input type="number" name="GST"/>
+						</div>
+						
+						<br>
+						<div class="button-div">
+							<input type = "button" value = "Add Invoice" onclick="addInvoice();"/>
+							<input type = "button" value = "Display All Invoices" onclick="displayInvoices();"/>
+						</div>
+					</form>
+					
+					<div id="allInvoices" class="all-invoices"></div>	
+					
+					<table id="invoice_table"></table>		
+						
+			
+				</section>
+				
+			</article>
+
+	<section class="demo-area" onload="checkCookie();">
+		<article class="demo-box"> 
+		<h1>Cookies</h1>
+		
+		<form name = "myform" action = "">
+			<center><label>Enter your name: </label>
+			<input type = "text" name = "customerName"/></center>
+			<center><input type = "button" value = "Set Cookie" onclick = "saveCookie();"/></center>
+		</form>  
+		
+		<script>
+		 function saveCookie() {
+			if( document.myform.customerName.value == "" ) {
+			   alert("Please enter your name!");
+			   return;
+			}
+			
+			cookievalue = encodeURI(document.myform.customerName.value) +  "; expires=Wed, 15 September 2020 09:06:21 GMT; path=/;";
+
+			document.cookie = "customerName=" + cookievalue;
+			alert("A cookie: customerName=" + cookievalue + " has been saved!");
+		 }
+		</script>
+
+		<script>
+			
+			(function() {			
+				var allcookies = document.cookie;
+                cookiearray = allcookies.split(';');
+	
+               var foundUserName = false;
+			   var username = "";
+			   for(var i=0; i < cookiearray.length; i++) {
+                  //
+				  name = cookiearray[i].split('=')[0];
+                  value = cookiearray[i].split('=')[1];
+				  //
+				  if (name == "customerName") {
+					foundUserName = true;
+					username = value;
+				  }
+				}
+	
+				if (foundUserName) {
+					alert("Hi " + username + ".Have a good day.");
+				}
+			})();
+        </script> 
+	    </article>		
+
+			<article class="demo-box"> 
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2790720.403522146!2d168.81754510306283!3d-40.13286625714341!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d2c200e17779687%3A0xb1d618e2756a4733!2z5paw6KW_5YWw!5e0!3m2!1szh-CN!2suk!4v1666857313826!5m2!1szh-CN!2suk" 
+				 width="1000" height="750" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </article>
+
+                <article class="demo-box"> 
+				<h2> Personal preference</h2>
+                <label> pick up a color </label>
+                <input type="color" id="colorPick" onchange="changeColor()">   
+
+			</article>
+
+
+			<article class="demo-box"> 
+				<h2> Artificial Intelligent</h2>
+                <h3 id="header3"></h3>
+ <button type="button"
+ onclick="document.getElementById('header3').innerHTML=Date()">Show me date and time</button>
+
+ <button onclick="document.getElementById('myImage').src='https://www.w3schools.com/js/pic_bulbon.gif'"> Turn on the light </button>
+
+ <img id="myImage" src="https://www.w3schools.com/js/pic_bulboff.gif">
+
+<button onclick="document.getElementById('myImage').src='https://www.w3schools.com/js/pic_bulboff.gif'"> Turn off the light</button>
+
+				<div class="rabot">
+					<img src="MEDIA/portrait-icon.jpg" />
+				</div>
+                <center><textarea name="Artificial Intelligent" id="Artificial Intelligent" rows="17" ></textarea></center>
+                <br>
+            </article>
+		</section>
+	</main>
+	
+	
+	<footer>
+		<div> @Created by: Vera 2022<br />
+			Contact me at: <a href="mailto:yuluhua6@gmail.com">yuluhua6@gmail.com</a>
+		</div>
+	</footer>
+
+	<script type="text/javascript" src="JS/JS.js">
+	</script>
+	
+	<script>
+		showDemo(0);
+	</script>
+	
+
+</body>
+</html>
+

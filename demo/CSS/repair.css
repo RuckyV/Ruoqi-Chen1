@@ -1,0 +1,158 @@
+body,html{
+    margin: 0;
+    padding: 0;
+    
+}
+body{
+    border: #000 1px solid;
+    box-sizing: border-box;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+h1,h2,h3,h4{
+    margin: 0;
+}
+header{
+background-color: #9f9f9f;
+margin: 0;
+padding: 0;
+width: 100%;
+height: 12vh;
+}
+
+header .top{
+    display: flex;
+    justify-content:space-between;
+    padding: 20px ;
+    box-sizing: border-box;
+}
+header .top .top_left{
+
+}
+
+
+
+ main {
+min-height: 75vh;
+border-bottom: solid 2px #979797;
+}
+
+
+main .center{
+    min-height: 75vh;
+    padding: 20px 45px;
+    }
+   .center_box1{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: #979797 solid 2px;
+  
+   } 
+
+   main .center p{
+    line-height: 10px;
+   }
+
+   .center_box1_right .RepairJob{
+position: relative;
+right: 50px;
+   }
+   .center_box1_right .box1_right_date{
+    margin: 10px 0 0 0;
+   }
+   .center_box1_right .box1_right_date .item{
+    display: flex;
+    margin: 0px 0;
+    height: 30px;
+   }
+   .center_box1_right .box1_right_date .item p{
+    padding-left: 15px;
+    line-height: 20px;
+    position: relative;
+    top: -15px;
+   }
+
+   .center_box1_right .box1_right_date .item h4{
+    line-height: 20px;
+   }
+
+
+   .center_box2{
+    margin: 10px 0 0 0;
+
+   }
+   .center_box2_list_item{
+    display: flex;
+    margin: 4px 0;
+   }
+
+   .center_box3{
+    margin: 20px 0 0 0;
+   }
+
+   .center_box4{
+    margin: 20px 0 0 0;
+    display: flex;
+    justify-content: end;
+   }
+
+  
+   .center_box4_list{
+    margin: 20px 0;
+   }
+
+   .center_box4_list_item{
+    display: flex;
+    margin: 5px 0;
+   }
+   .center_box4_list_item .label{
+    width: 160px;
+   }
+   .center_box4_list_item .right_txt{
+    padding-left: 10px;
+   }
+footer{
+    height: 20vh;
+}
+
+.bottom{
+    
+    padding:20px 40px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.bt_1{
+    flex: 1;
+
+}
+
+.bt1_list_item{
+    margin: 5px 0;
+}
+
+.bt_2{
+    flex: 1;
+
+}
+
+.bt_2 p{
+    position: relative;
+    top: 80px;
+}
+
+.bt_3{
+    flex: 0;
+
+}
+.bt_3_list{
+    margin: 20px 0 0 0;
+}
+.bt_3_list .item{
+    display: flex;
+}
+.ContactUs{
+    text-align: right;
+}
+.bt_3_list .item .txt{
+    padding-left: 4px;
+}

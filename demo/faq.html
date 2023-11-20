@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>FAQ</title>
+  <link rel="stylesheet" type="text/css" href="CSS/common.css">
+  <link rel="stylesheet" href="./CSS/faq.css">
+</head>
+<body>
+	<div class="CurtainMenu">
+
+		<div class="logo-tagline">
+			<div class="logo">
+				<img src="MEDIA/global.png"/>
+			</div>
+			<div class="tagline">ITWD 6.408
+			</div>
+		</div>
+		
+		
+		<div class="desktop-menu">
+			<div class="horizontal-nav">
+				<ul>
+					<li><a href="homepage.html">HOME</a></li>
+					<li><a href="booking.html">BOOKING</a></li>
+					<li class="active"><a href="faq.html">FAQ</a></li>
+					<li><a href="research.html">RESEARCH</a></li>
+					<li><a href="Advanced JS.html">ADVANCE JS</a></li>	
+				</ul>
+			</div>
+		</div>
+		<p style="background-color: #026eda;" class="menu-icon-style" onclick="openNav()">≡</p>
+	</div>
+	
+	
+	<nav id="curtain-nav">
+		<a href="javascript:void(0)" class="nav-close-button" onclick="closeNav()">❌</a>
+		<div class="curtain-nav-content">
+			<ul>
+				<li class="active"><a href="index.html">HOME</a></li>
+				<li><a href="fomrs.html">FORMS</a></li>
+				<li><a href="xml-jsaon.html">XML/JSON</a></li>
+				<li><a href="js-demo.html">JAVASCRIPT</a></li>
+				<li><a href="my-research.html">RESEARCH</a></li>	
+			</ul>
+		</div>
+	</nav>
+
+  <header>Laptop Fix Booking FAQs</header>
+	<main>
+		<section class="FAQ"></section>
+		<center>
+			<label for="Search keywords">Search keywords:</label>
+		
+			<input type="text" id="searchInput">
+		    <input type="button" value="Search" id="searchBtn" onclick="onSearch()">
+		</center>
+			
+			<div id="questions"></div>
+	    </div>
+  <div id="faq">
+	</main>
+
+  <footer>
+		<div> Advanced Web Design, Copyright © 2022  <br />
+			Contact me at: <a href="6677V@eit.ac.nz">6677V@eit.ac.nz</a>
+		</div>
+	</footer>
+
+</body>
+<script  src="./JS/faq.js"></script>
+</html>

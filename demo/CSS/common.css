@@ -1,0 +1,187 @@
+nav {
+	padding: 10px 10px 10px 10px;
+	overflow: visible;
+}
+
+nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: visible;
+}
+
+nav ul li {
+	display: block;
+	font-family: 'Oswald', sans-serif;
+	font-size: 1.2em;
+	text-transform: uppercase;
+}
+
+nav ul li a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;	
+}
+
+.active {
+	background-color: #41d1a8;
+}
+
+nav ul li:hover:not(.active) {
+	background-color:#e5418b;
+}
+
+
+nav ul li ul li {
+	background:#f49b14; 
+	display: block; 
+	font-size: 2em;
+}
+
+nav ul li ul li a {
+	display: block; 
+	text-align: left;
+
+}
+
+nav ul li.dropdown:hover ul {
+	display: block;
+}
+
+
+.CurtainMenu {
+	background-color:#026eda;
+	min-height: 8.9vh;
+	
+	
+	display: flex;
+	flex-direction: row;
+}
+
+.logo-tagline {
+	flex: 1.4;
+	display:flex;
+	flex-direction:initial;
+}
+
+.logo, .tagline {
+	font-size: 1.4em;
+	color:rgb(240, 240, 240);
+}
+
+.tagline{
+	
+	display: flex;
+	justify-content: left;
+	align-items: center;
+}
+
+.desktop-menu {
+	flex: 3;
+	display: none;	
+}
+
+
+.menu-icon-style {
+	flex: 1;
+		
+	font-size: 4.0em;
+	color: rgb(198, 198, 241);
+	cursor: pointer;
+	text-align: right;
+	margin-right: 20px;
+}
+
+#curtain-nav {
+	height: 70%;
+	width: 0;
+	padding: 0;
+	position: fixed;
+	z-index: 3;
+	top: 0; 
+	right: 0;
+	background-color:rgb(223, 192, 252);
+	background-color:#e597f5;
+	overflow-x: hidden;
+	transition: 0.5s;	
+}
+
+.curtain-nav-content {
+	
+	position: relative;
+	top: 15%;
+	width: 100%;
+	text-align: center;
+	margin-top: 30px;	
+	overflow: visible;
+}
+
+.nav-close-button {
+	position: absolute;
+	top: 10px;
+	right: 45px;
+	font-size: 2.0em;
+	color: rgb(254, 233, 233);
+	text-decoration: none;
+}
+
+
+@media screen and (min-width: 768px) {
+    .desktop-menu {
+        display: block;
+    }
+    
+    
+    .horizontal-nav {
+            background-color:#026eda; 
+         padding: 10px 10px 10px 10px;
+    }
+    
+    .horizontal-nav ul {
+         list-style-type: none;
+         margin: 0;
+         padding: 0;
+         overflow: hidden;
+     }
+ 
+     .horizontal-nav ul li {
+         display: inline-block;
+         font-family: 'Oswald', sans-serif;
+         font-size: 1.2em;
+     }
+ 
+     .horizontal-nav ul li a {
+         display: block;
+         color:rgb(255, 255, 255);
+         text-align: center;
+         padding: 16px 22px;
+         text-decoration: none;	
+     }
+ 
+ 
+     .horizontal-nav ul li:hover:not(.active) {
+         background-color:rgba(191, 74, 238, 0.925);
+     }
+     
+     
+     .bio-webtechno {
+         min-height: 25vh;
+         background-color:aliceblue;
+         display: flex;
+         flex-direction: row;
+     }
+     
+     .portrai-paragraph {
+         
+         display: flex;
+         flex-direction: row;	
+     }
+     
+     
+     .topics_container {
+         display:flex;
+         flex-direction: row;
+     }
+ }

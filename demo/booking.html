@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>web2</title>
+  <link rel="stylesheet" type="text/css" href="CSS/common.css">
+  <link rel="stylesheet" type="text/css" href="css/booking.css">
+</head>
+<body>
+	<div class="CurtainMenu">
+
+		<div class="logo-tagline">
+			<div class="logo">
+				<img src="MEDIA/global.png"/>
+			</div>
+			<div class="tagline">ITWD 6.408
+			</div>
+		</div>
+		
+		
+		<div class="desktop-menu">
+			<div class="horizontal-nav">
+				<ul>
+					<li><a href="homepage.html">HOME</a></li>
+					<li class="active"><a href="booking.html">BOOKING</a></li>
+					<li><a href="faq.html">FAQ</a></li>
+					<li><a href="research.html">RESEARCH</a></li>
+					<li><a href="Advanced JS.html">ADVANCE JS</a></li>	
+				</ul>
+			</div>
+		</div>
+		<p class="menu-icon-style" onclick="openNav()">≡</p>
+	</div>
+	
+	
+	<nav id="curtain-nav">
+		<a href="javascript:void(0)" class="nav-close-button" onclick="closeNav()">❌</a>
+		<div class="curtain-nav-content">
+			<ul>
+				<li class="active"><a href="index.html">HOME</a></li>
+				<li><a href="fomrs.html">FORMS</a></li>
+				<li><a href="xml-jsaon.html">XML/JSON</a></li>
+				<li><a href="js-demo.html">JAVASCRIPT</a></li>
+				<li><a href="my-research.html">RESEARCH</a></li>	
+			</ul>
+		</div>
+	</nav>
+<header>
+  <h1 class="title-area">Laptop Fix Booking System</h1>
+  <nav class="menu-area">
+    <ul>
+      <button><a href="homepage.html">HOME</a></button>
+      <button><a href="Advanced JS.html">EXTENSION</a></button>
+      <p>First select the contents in the purple box</p>
+    </ul>
+  </nav>
+</header>
+
+<main>
+
+  <form name="repairForm" id="repairBookingForm" >
+    <div class="form-layout">
+      <section class="customerDetails">
+        <h2>Customre Details</h2>
+        <fieldset>
+          <legend>Customer Type:*</legend>
+          <form>
+            Customer<input class="people_radio" type="radio" name="people" value="Customer" checked>
+            <br>
+            Business<input  class="people_radio" type="radio" name="people" value="Business" >
+          </form>
+        </fieldset>
+
+        <label for="Title_label">Title:*</label>
+        <select id="Title" name="title">
+          <option value="Ms">Ms</option>
+          <option value="Mrs">Mrs</option>
+          <option value="Miss">Miss</option>
+          <option value="Mr">Mr</option>
+        </select>
+        <br>
+
+        <label>First name:*</label>
+        <input type="text" id="fName" onblur="checkFirstName()">
+        <span class="tip" id="fName2"></span>
+
+        <br>
+        <label>Last name:*</label>
+        <input type="text" id="LName" onblur="checkLastName()">
+        <span class="tip" id="LName2"></span>
+        
+        <br>
+        <label>Street:*</label>
+        <input type="text" id="Street" onblur="checckStreet()">
+        <span class="tip" id="Street2"></span>
+        <br>
+        <label>Suburb:</label>
+        <input type="text" id="Suburb" onblur="checkSuburb()">
+        <span class="tip" id="Suburb2"></span>
+        <br>
+        <label>City:*</label>
+        <input type="text" id="City" onblur="checckCity()">
+        <span class="tip" id="City2"></span>
+
+        <br>
+        <label>Post Code:</label>
+        <input type="text" id="PostCode" onblur="checkPostCode()">
+        <span class="tip" id="PostCode2"></span>
+        <br>
+        <label>Phone Number:*</label>
+        <input type="text" id="PhoneNumber" onblur="checkPhoneNumber()">
+        <span class="tip" id="PhoneNumber2"></span>
+        <br>
+
+        <label>Email:*</label>
+        <input type="text" id="Email" onblur="checkEmail()">
+        <span class="tip" id="Email2"></span>
+       
+      </section>
+
+      <section class="repairDetails">
+        <h2>Repair Details</h2>
+       <td>Purchase Date:*</td>
+        <td>
+          <input type="date" id="purchseDate" required="false" onblur="checkPurchseDate()">
+          <span class="tip" id="purchseDate2"></span>
+        </td>
+        <br>
+        <td>Repair Date:*</td>
+        <td>
+          <input type="date" id="repairDate"  required="false" onblur="checkRepairDate()">
+          <span class="tip" id="repairDate2"></span>
+        </td>
+        <br>
+        <fieldset>
+          <legend>Under Warranty</legend>
+          <form>
+            Warranty:<input id="warranty" type="checkbox" name="warranty" value="Warranty" checked>
+          </form>
+        </fieldset>
+        <br>
+        <label>Serial Number:*</label>
+        <input type="text" id="SerialNumber" onblur="checkSerialNumber()">
+        <span class="tip" id="SerialNumber2"></span>
+        <br>
+         <label for="Make">Make:*</label>
+        <select id="Make" name="make">
+          <option value="Huawei laptop">Huawei laptop</option>
+          <option value="Hewlett Packard laptop">Hewlett Packard laptop</option>
+          <option value="Apple MacBook Air laptop">Apple MacBook Air laptop</option>
+          <option value="Lenovo laptop">Lenovo laptop</option>
+        </select>
+        <br>
+        <label>Model Number:</label>
+        <input type="text" id="ModelNumber">
+        <br>
+        <label for="Fault Category">Fault Category:*</label>
+        <select id="FaultCategory" name="FaultCategory">
+          <option value="screen">screen</option>
+          <option value="Laptop">Laptop</option>
+          <option value="Hardware">Hardware</option>
+          <option value="System failure, unknown virus program affecting the system">System failure, unknown virus program affecting the system</option>
+          <option value="The CD-ROM drive of the notebook is faulty">The CD-ROM drive of the notebook is faulty</option>
+          <option value="The display image is not clear">The display image is not clear</option>
+          <option value="Check whether the DC board is normal">Check whether the DC board is normal</option>
+          <option value=" Check and repair the main board"> Check and repair the main board</option>
+          <option value="The chassis power supply is faulty">The chassis power supply is faulty</option>
+          <option value="The USB is faulty">The USB is faulty</option>
+          <option value="The power supply problem">The power supply problem</option>
+        </select>
+          <br>
+          <label for="Description">Description:</label>
+          <textarea name="Description" id="Description" rows="7"></textarea>
+       
+        <br>
+       
+      </section>	
+
+      <section class="courtesyPhone">
+        <h2>Courtesy Phone</h2>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+<fieldset> 
+  <h3> Courtesy Laptop </h3>
+  <br>
+  <label for="itemType">Item Type:</label>
+        <select id="itemType" name="itemType">
+    <option value="Dell XP"> Dell XP</option>
+    <option value="HP Pavilion"> HP Pavilion</option>
+    <option value="Other laptops"> Other laptops</option>
+    <option value="Charger "> Charger </option> 
+  </select>
+  <br>
+  <br> 
+
+  <button id="addItemBtn"> Add Item </button> 
+  <input id="hideTableBtn" type="button" value="Hide Table"> 
+  <br>
+  <br>
+  <table id="itemTable" border="4"> 
+    <tr> 
+      <th style="border: 2.5px solid blue;width:10vw"> Item </th>
+      <th style="border: 2.5px solid rgb(132, 0, 255);width:10vw"> Cost </th>
+      <th style="border: 2.5px solid rgb(103, 0, 0);width:10vw"> Action </th>
+    </tr> 
+  </table> 
+</fieldset>
+
+      </section>	
+
+      <section class="costSection">
+        <h2>Cost</h2>
+        <tr>
+          <td>Bond:</td>
+          <td><input id="bondAmount" type="text" value="$ 0" readonly></td>
+        </tr>
+        <br>
+  
+        <tr>
+          <td>Service Fee:</td>
+          <td><input id="serviceFee" type="text" value="$ 0" readonly></td>
+        </tr>
+        <br>
+        <tr>
+          <td>Total:</td>
+          <td><input id="subTotal" type="text" value="$ 0" readonly></td>
+        </tr>
+        <br>
+  
+        <tr>
+          <td>GST:</td>
+          <td><input id="gst" type="text" value="$ 0" readonly></td>
+        </tr>
+        <br>
+  
+        <tr>
+          <td>Total(+GST):</td>
+          <td><input id="grandTotal" type="text" value="$ 0" readonly></td>
+        </tr>						
+      </section>	
+
+      <section class="buttonSection">
+        
+        <center><input id="Submit" type="submit" value="Submit">
+        <input type="reset" value="Reset" id="btnReset">
+        <a href="faq.html"> 
+          <input type="button" value="FAQ?" id="FAQ?"></a>
+
+      </center>
+        
+      </section>				
+    </div>		
+  </form>	
+</main>
+
+<footer>
+  <p>Advanced Web Design, Copyright &copy; 2022</p>
+</footer>
+<script type="text/javascript" src="js/booking.js">
+	</script>
+  
+</body>
+</html>

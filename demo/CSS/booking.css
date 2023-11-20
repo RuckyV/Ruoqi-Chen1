@@ -1,0 +1,218 @@
+* {
+	margin: 0;
+	padding: 1;
+	box-sizing: border-box;
+	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header{
+	background-color: rgb(62, 120, 255);
+	min-height: 8vh;
+	display: block;
+	color: white;
+	font-weight: bold;
+	text-align: center;
+	
+}
+
+header .title-area {
+		padding: 1.5em 1.5em;
+}
+
+header nav ul button {
+	display: block;
+	background-color:rgb(251, 80, 125);
+	margin-top: 1em;
+	margin-bottom: 1em;
+	padding: 0.5em;	
+	width: 4cm;
+}
+
+header nav ul button a {
+	text-decoration: none;
+	color: white;
+	font-weight: normal;
+	font-size: large;
+}
+
+
+main {
+	background-color:antiquewhite;
+}
+
+.form-layout {
+	display: grid;
+	grid-template-rows: auto ; 
+}
+
+.customerDetails {
+	background-color:pink;
+	min-height: 50vh;
+	color: rgb(117, 0, 27);
+}
+.customerDetails fieldset{
+	margin: 0 1.5em 1em 2vw;
+}
+
+.customerDetails fieldset input{
+	display:block;
+	margin:-1em auto 0 10vw;
+}
+
+.customerDetails label{
+	margin: 1em 2em 1em 3vw;
+	width:15vw;
+}
+
+.customerDetails input{
+	display:block;
+	margin: -1.5em auto 0 14.5vw;
+	width:14vw;
+}
+
+.customerDetails select{
+	margin:0 auto 2em 7vw;
+	text-align:center;
+	text-align-last: center;
+	width:14vw;
+}
+
+.repairDetails {
+	background-color: rgb(189, 251, 189);
+	min-height: 50vh;
+	color: #033b24;
+}
+
+.repairDetails fieldset{
+	margin: 0 1em 1em 2vw;
+}
+
+.repairDetails fieldset input{
+	display:block;
+	margin:-1em auto 0 10vw;
+}
+
+.repairDetails label{
+	margin: 1em 2em 1em 3vw;
+	width:14vw;
+}
+
+.repairDetails input{
+	display:block;
+	margin: -1.5em auto 0 16vw;
+	width:14vw;
+}
+
+.repairDetails select{
+	margin:0 auto 2em 2vw;
+	text-align:center;
+	text-align-last:center;
+	width:14vw;
+}
+
+.repairDetails textarea{
+	display:block;
+	margin: -1em auto 1em 14.5vw ;
+	width:16vw;
+	font-size:15px;
+}
+
+
+.courtesyPhone {
+	background-color:  rgb(241, 209, 241);
+	min-height: 35vh;
+	color:rgb(95, 0, 154);
+
+}
+
+.costSection {
+	background-color: rgb(170, 255, 255);
+	min-height: 30vh;
+	color: rgb(2, 0, 112);
+}
+
+.costSection td{
+	margin: 2em 2em 3em 3vw;
+	width:15vw;
+}
+
+.costSection input{
+	display:block;
+	margin: -1.5em 1em 0em 14vw;
+	width:15vw;
+}
+
+.buttonSection {
+	background-color:  rgb(110, 255, 233);
+	min-height: 13vh;
+}
+
+.buttonSection input{
+	width: 80px;
+	height: 40px;
+	color:#033b24;
+	margin: 3em auto 0 1vw;
+
+}
+
+
+footer {
+	background-color: #0058b0;
+	min-height: 5em;
+	color: white;
+	font-weight: bold;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+
+@media screen and (min-width: 600px) {
+
+	header nav ul {
+		display: grid;
+		grid-template-columns: 2fr 2fr;
+		grid-gap: 0.5em;
+	}
+}
+
+
+@media screen and (min-width: 800px) {
+	
+	header {
+		display: grid;
+		grid-template-columns: 2fr 1.5fr;
+	}
+	
+	
+	.form-layout {
+		display: grid;
+		grid-template-areas: 'box1 box2 box3'
+                             'box1 box2 box4'
+	                         'box5 box5 box5';
+	}	
+	.customerDetails {
+		grid-area: box1;
+	}
+	.repairDetails {
+		grid-area: box2;
+	}
+	.courtesyPhone {
+		grid-area: box3;
+	}
+	.costSection {
+		grid-area: box4;
+	}
+	.buttonSection {
+		grid-area: box5;
+	}
+	
+}
+
+.tip {
+	color: red;
+	margin-left: 230px;
+	font-size: 14px;
+}

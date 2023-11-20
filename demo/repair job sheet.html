@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/repair.css">
+</head>
+
+<body>
+    <header>
+        <div class="top">
+            <div class="top_left">
+                <h2>Repair Booking</h2>
+            </div>
+            <div class="top_right">
+                <div class="txt1">
+                    Amount Due
+                </div>
+                <div class="txt2">
+                    <h3 id="AmountDue">$ 695.75</h3>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+
+    <main>
+        <div class="center">
+
+            <div class="center_box_content">
+
+                <div class="center_box1">
+                    <div class="center_box1_left">
+                        <div class="Customer">
+                            <h3>Customer</h3>
+                        </div>
+                        <p class="user_name"> </p>
+                        <p id="Street"> </p>
+                        <p id="Suburb"></p>
+                        <p id="PostCode"></p>
+                        <p id="PhoneNumber"></p>
+                        <p id="Email"></p>
+                    </div>
+                    <div class="center_box1_right">
+                        <div class="RepairJob">
+                            <h3>Repair Job</h3>
+                        </div>
+                        <div class="box1_right_date">
+                            <div class="item">
+                                <div class="label">
+                                    <h4>Job Number:</h4>
+                                </div>
+                                <div class="box1_right_date_txt">
+                                    <p>1000</p>
+                                </div>
+                            </div>
+
+                            <div class="item">
+                                <div class="label">
+                                    <h4>Invoice Date:</h4>
+                                </div>
+                                <div class="box1_right_date_txt">
+                                    <p>Oct 08, 2022-17:06 </p>
+                                </div>
+                            </div>
+
+                            <div class="item">
+                                <div class="label">
+                                    <h4>Payment Due:</h4>
+                                </div>
+                                <div id="PaymentDue" class=" box1_right_date_txt">
+                                    <p></p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="center_box2">
+                    <div class="RepairDetails">
+                        <h3>Repair Details</h3>
+                    </div>
+                    <div class="center_box2_list">
+
+                        <div class="center_box2_list_item">
+                            <div class="laebl">
+                                <h4>Purchase Date:</h4>
+                            </div>
+                            <div class="right_txt">
+                                <span id="purchseDate">  </span>
+                            </div>
+                        </div>
+                        <div class="center_box2_list_item">
+                            <div class="laebl">
+                                <h4>Repair Date/Time:</h4>
+                            </div>
+                            <div class="right_txt">
+                                <span id="repairDate">  </span>
+                            </div>
+                        </div>
+
+                        <div class="center_box2_list_item">
+                            <div class="laebl">
+                                <h4>Under Warranty:</h4>
+                            </div>
+                            <div class="right_txt">
+                                <span id="warranty"> </span>
+                            </div>
+                        </div>
+
+                        <div class="center_box2_list_item">
+                            <div class="laebl">
+                                <h4>Serial Number:</h4>
+                            </div>
+                            <div class="right_txt">
+                                <span id="SerialNumber"> </span>
+                            </div>
+                        </div>
+
+                        <div class="center_box2_list_item">
+                            <div class="laebl">
+                                <h4>Device Make:</h4>
+                            </div>
+                            <div class="right_txt">
+                                <span id="make">  </span>
+                            </div>
+                        </div>
+
+
+                        <div class="center_box2_list_item">
+                            <div class="laebl">
+                                <h4>Model Number:</h4>
+                            </div>
+                            <div class="right_txt">
+                                <span id="ModelNumber">  </span>
+                            </div>
+                        </div>
+
+
+                        <div class="center_box2_list_item">
+                            <div class="laebl">
+                                <h4>Fault Category:</h4>
+                            </div>
+                            <div class="right_txt">
+                                <span id="FaultCategory">  </span>
+                            </div>
+                        </div>
+
+                        <div class="center_box2_list_item">
+                            <div class="laebl">
+                                <h4>Description:</h4>
+                            </div>
+                            <div class="right_txt">
+                                <span id="Description">  </span>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <div class="center_box3">
+                    <div class="CourtesyLoanDeviceDetails">
+                        <h3>Courtesy Loan Device Details</h3>
+                    </div>
+                    <div class="table_box" style="margin: 10px 0;">
+                        <table border="1" cellspacing="0" cellpadding="0">
+                            <tr>
+                                <th width="100">Item</th>
+                                <th width="200" style="text-align: center;">Cost</th>
+                            </tr>
+                            <tbody id="tbody_">
+                               
+                            </tbody>
+                            
+                        </table>
+                    </div>
+                </div>
+
+                <div class="center_box4">
+                    <div class="Totals">
+                        <h3> Totals</h3>
+                    </div>
+
+                    <div class="center_box4_list">
+                        <div class="center_box4_list_item">
+                            <div class="label">
+                                <h4>Bond:</h4>
+                            </div>
+                            <div id="bondAmount" class="right_txt">
+                              
+                            </div>
+                        </div>
+
+
+                        <div class="center_box4_list_item">
+                            <div class="label">
+                                <h4>Service Fee:</h4>
+                            </div>
+                            <div id="serviceFee" class="right_txt">
+                              
+                            </div>
+                        </div>
+
+                        <div class="center_box4_list_item">
+                            <div class="label">
+                                <h4>Total:</h4>
+                            </div>
+                            <div id="subTotal" class="right_txt">
+                               
+                            </div>
+                        </div>
+
+
+                        <div class="center_box4_list_item">
+                            <div class="label">
+                                <h4>GST:</h4>
+                            </div>
+                            <div id="gst" class="right_txt">
+                               
+                            </div>
+                        </div>
+
+                        <div class="center_box4_list_item">
+                            <div class="label">
+                                <h4>Total(+GST):</h4>
+                            </div>
+                            <div id="grandTotal" class="right_txt">
+                              
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+
+    <footer>
+        <div class="bottom">
+            <div class="bt_1">
+                <div class="LaptopFixServices">
+                    <h3>Laptop Fix Services</h3>
+                </div>
+                <div class="bt1_list">
+                    <div class="bt1_list_item">
+                        <span>42 Fused It Drive </span>
+                    </div>
+
+                    <div class="bt1_list_item">
+                        <span>Rucky Chen </span>
+                    </div>
+                    <div class="bt1_list_item">
+                        <span>Zhejiang, Shaoxing 2801 </span>
+                    </div>
+                    <div class="bt1_list_item">
+                        <span>China </span>
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="bt_2">
+                <p>
+                    Advanced Web Design, Copyright 2022
+                </p>
+            </div>
+            <div class="bt_3">
+                <div class="ContactUs">
+                    <h3> Contact Us</h3>
+                </div>
+                <div class="bt_3_list">
+                    <div class="item">
+                        <div class="label">
+                            <h4>Phone:</h4>
+                        </div>
+                        <div class="txt">
+                            <span>66667777 </span>
+                        </div>
+                    </div>
+
+
+                    <div class="item">
+                        <div class="label">
+                            <h4>Email:</h4>
+                        </div>
+                        <div class="txt">
+                            <span>ruckyy@phonefix.it </span>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="JS/repair.js"></script>
+</body>
+
+
+
+</html>
